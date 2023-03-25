@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
+            <a href="/">
               <h2 className="text-2xl font-bold text-white">SimpliAsk</h2>
             </a>
             <div className="md:hidden">
@@ -73,13 +73,13 @@ const Navbar = () => {
         </div>
         <div className="hidden space-x-2 md:inline-block">
           <a
-            href="javascript:void(0)"
+            href="login"
             className="px-4 py-2 text-white bg-[#202454] rounded-md shadow hover:bg-white hover:text-black"
           >
             Sign in
           </a>
           <a
-            href="javascript:void(0)"
+            href="signup"
             className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
           >
             Sign up
