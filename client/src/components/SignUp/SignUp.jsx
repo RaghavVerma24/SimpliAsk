@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
+import axios from 'axios'; 
+
 
 function SignUp() {
     const [email, setEmail] = useState("");
@@ -11,31 +13,28 @@ function SignUp() {
 
     async function submit(e) {
         e.preventDefault();
-        console.log("SignUp")
+        console.log("SignUp");
 
         try {
-            axios.post("http://localhost:8000/signup", {
-                username: this.state.username,
-                password: this.state.password,
-              },
-              {
-                headers: {
-                  "Content-type": "application/json; charset=UTF-8",
-                }
-              })
-            .then((res) => {
-                if ((res.data = "exist")) {
-                    alert("User already exists");
-                } else if ((res.data = "notexist")) {
-                    history("/dashboard", { state: { id: email } });
-                }
-            })
-            .catch((e) => {
-                alert("Incorrect Login");
-                console.log(e);
-            });
+            await axios
+                .post("http://localhost:8000/signup", {
+                    email,
+                    password,
+                })
+                .then((res) => {
+                    if ((res.data == "exist")) {
+                        alert("User already exists");
+                    } else if ((res.data == "nonexist")) {
+                        console.log("New User")
+                        history("/dashboard", { state: { id: email } });
+                    }
+                })
+                .catch((e) => {
+                    alert("Incorrect Login");
+                    console.log(e);
+                });
         } catch {
-            console.log(e)
+            console.log(e);
         }
     }
 
@@ -159,6 +158,6 @@ function SignUp() {
             </section>
         </div>
     );
-};
+}
 
 export default SignUp;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
+import axios from 'axios'; 
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -16,18 +17,13 @@ function Login() {
         try {
             await axios
                 .post("http://localhost:8000/login", {
-                    username: this.state.username,
-                    password: this.state.password,
-                  },
-                  {
-                    headers: {
-                      "Content-type": "application/json; charset=UTF-8",
-                    }
-                  })
+                    email,
+                    password,
+                })
                 .then((res) => {
-                    if ((res.data = "exist")) {
+                    if ((res.data == "exist")) {
                         history("/dashboard", { state: { id: email } });
-                    } else if ((res.data = "notexist")) {
+                    } else if ((res.data == "nonexist")) {
                         alert("User has not signed up");
                     }
                 })
