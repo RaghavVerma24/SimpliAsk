@@ -1,12 +1,8 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 import Landing from "./components/Landing/Landing.jsx";
 import Login from "./components/Login/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -16,6 +12,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
