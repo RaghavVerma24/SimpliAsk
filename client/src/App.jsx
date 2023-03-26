@@ -2,7 +2,7 @@ import Landing from "./components/Landing/Landing.jsx";
 import Login from "./components/Login/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
