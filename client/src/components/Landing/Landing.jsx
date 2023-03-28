@@ -11,15 +11,6 @@ const Landing = () => {
     <div>
       <Navbar/>
       <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
       <Features/>
       <Faq/>
       <Reviews/>
