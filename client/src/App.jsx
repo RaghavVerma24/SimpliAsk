@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
-    <div className='h-100vh bg-[#191b3c]'>
+    <div className=' bg-[#191b3c]'>
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />

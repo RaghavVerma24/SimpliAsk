@@ -2,14 +2,18 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import DashboardHeader from "./DashboardHeader";
+import DashboardComponents from "./DashboardComponents";
 
 function Dashboard() {
     const location = useLocation();
 
     return (
-        <div className="h-100vh bg-[#191b3c]" >
+        <div className="h-full bg-[#191b3c]" >
             <DashboardHeader/>
-            <Sidebar/>
+            <div className="float-left">
+                <Sidebar/>
+            </div>
+            <DashboardComponents/>
         </div>
     );
 }

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Sidebar() {
     return (
-        <div className="flex bg-[#6c63ff]">
-            <div className="flex flex-col h-screen p-3 bg-[#0C0404] shadow w-60">
+        <div className="h-screen flex bg-[#fff]">
+            <div className="flex flex-col p-3 bg-[#0C0404] shadow w-60">
                 <div className="space-y-3">
                     <div className="flex-1">
                         <ul className="pt-2 pb-4 space-y-1 text-sm">
