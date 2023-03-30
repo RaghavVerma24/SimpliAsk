@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer class=" bg-[#202454] rounded-lg shadow m-4 dark:bg-gray-800 mb-0 mx-auto mt-20 md:container md:mx-auto">
-        <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
+      <footer class="mb-20 bg-[#202454] rounded-lg shadow m-4 dark:bg-gray-800 mb-20 mt-20 md:container md:mx-auto">
+        <div class=" mb-20 container md:p-6 p-4 md:flex md:items-center md:justify-between">
           <span class="text-sm text-white sm:text-center dark:text-gray-400">
             © 2023{" "}
             <a href="https://flowbite.com/" class="hover:underline">

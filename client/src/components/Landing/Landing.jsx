@@ -8,7 +8,7 @@ import Reviews from './Components/Reviews'
 
 const Landing = () => {
   return (
-    <div>
+    <div className='bg-[#191b3c] h-100'>
       <Navbar/>
       <Home/>
       <Features/>

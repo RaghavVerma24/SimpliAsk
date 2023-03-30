@@ -3,7 +3,7 @@ import React from "react";
 import DoctorImg from "../../../assets/doctor.svg";
 const Home = () => {
     return (
-      <div className="justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 mb-10">
+      <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8">
             <div className="float-left mr-20 xl:max-w-3xl">
                 <h2 className="text-[40px] font-bold text-white">
                     The Ultimate Doctor to Patient connectivity tool
