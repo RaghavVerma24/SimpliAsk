@@ -3,6 +3,10 @@ import Login from "./components/Login/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Appointments from "./pages/Appointments/Appointments.jsx";
+import Chat from "./pages/Chat/Chat.jsx";
+import Precriptions from "./pages/Prescriptions/Precriptions.jsx";
+import Records from "./pages/Records/Records.jsx";
 
 function App() {
   return (
@@ -13,6 +17,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/precriptions" element={<Precriptions />} />
+          <Route path="/appointments" element={<Appointments />} />
+          <Route path="/records" element={<Records />} />
         </Routes>
       </Router>
     </div>
