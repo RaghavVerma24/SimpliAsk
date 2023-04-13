@@ -66,7 +66,7 @@ const Navbar = () => {
                 <a href="javascript:void(0)">FAQs</a>
               </li>
               <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Reviews</a>
+                <a href="javascript:void(0)">Contact</a>
               </li>
             </ul>
           </div>

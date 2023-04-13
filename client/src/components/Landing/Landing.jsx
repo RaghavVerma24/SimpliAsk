@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import Faq from './Components/Faq'
 import Features from './Components/Features'
 import Home from './Components/Home'
-import Reviews from './Components/Reviews'
+import Contact from './Components/Contact'
 
 const Landing = () => {
   return (
@@ -13,7 +13,7 @@ const Landing = () => {
       <Home/>
       <Features/>
       <Faq/>
-      <Reviews/>
+      <Contact/>
       <Footer/>
     </div>
   )
