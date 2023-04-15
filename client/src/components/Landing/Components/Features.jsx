@@ -9,7 +9,7 @@ import RecordsImg from "../../../assets/records.svg"
 const Features = () => {
     return (
         <>
-            <div className="py-20 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20">
+            <div className="py-20 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="appointments">
                 <div className="max-w-50">
                     <img
                         src={AppointmentImg}

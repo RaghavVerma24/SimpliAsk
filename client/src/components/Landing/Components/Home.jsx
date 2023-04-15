@@ -1,6 +1,7 @@
 import React from "react";
 import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { scrollFunction } from "../../HelperFunctions";
 
 import DoctorImg from "../../../assets/doctor.svg";
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
                 <FontAwesomeIcon
                     icon={faArrowCircleDown}
                     className=" text-[50px]"
+                    onClick={() => scrollFunction('appointments')}
                 />
             </h1>
         </>
