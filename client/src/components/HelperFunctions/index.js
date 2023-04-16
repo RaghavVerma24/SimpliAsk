@@ -1,3 +1,4 @@
+import { v4 as uuid } from 'uuid';
 
 export function scrollFunction(id) {
     let e = document.getElementById(id);
@@ -6,4 +7,8 @@ export function scrollFunction(id) {
       behavior: 'smooth',
       inline: 'start'
     });
+}
+
+export function generateID() {
+  return uuid();
 }
