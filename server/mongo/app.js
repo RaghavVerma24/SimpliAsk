@@ -13,8 +13,8 @@ app.post("/login", async (req, res) => {
 
     try {
         const check = await collection.findOne({ email: email });
-
-        if (check) {
+        
+        if (check && check.password == password) {
             res.json("exist");
         } else {
             res.json("nonexist");
@@ -42,7 +42,6 @@ app.post("/signup", async (req, res) => {
             res.json("exist");
         } else {
             res.json("nonexist");
-            console.log(data)
             await collection.insertMany([data]);
         }
     } catch (error) {
