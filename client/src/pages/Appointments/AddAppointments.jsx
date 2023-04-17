@@ -1,7 +1,8 @@
-import {useState} from 'react';
-import { generateID } from '../../components/HelperFunctions';
+import React, {useState} from 'react';
+import axios from "axios";
 
-const AddAppointment = () => {
+function AddAppointment () {
+
     const clearData = () => {
         setDoctorName('');
         setPatientName('');
@@ -10,7 +11,6 @@ const AddAppointment = () => {
         setAptNotes('');
       };
 
-    let [aptID, setAptID] = useState("");
     let [doctorName, setDoctorName] = useState("");
     let [patientName, setPatientName] = useState("");
     let [aptDate, setAptDate] = useState("");
@@ -20,21 +20,30 @@ const AddAppointment = () => {
     async function submit(e) {
         e.preventDefault();
 
-        formDataPublish()
-
-    }
-
-    function formDataPublish() {
-        const appointmentInfo = {
-            aptId: generateID(),
-            doctorName: doctorName,
-            patientName: patientName,
-            aptDate: aptDate,
-            aptTime:  aptTime,
-            aptNotes: aptNotes,
-            // healthCard: healthCard
+        let status = "create"
+        try {
+            await axios
+                .post("http://localhost:8000/appointments", {
+                    type: status,
+                    doctorName: doctorName,
+                    patientName: patientName,
+                    aptDate: aptDate,
+                    aptTime:  aptTime,
+                    aptNotes: aptNotes,
+                })
+                .then((res) => {
+                    // if (JSON.stringify(res.data) === JSON.stringify({key: "test"})) {
+                    //     console.log("Appointment Created")
+                    // }
+                })
+                .catch((e) => {
+                    alert("Appointment Details Invalid");
+                    console.log(e);
+                });
+        } catch {
+            console.log(e);
         }
-        console.log(appointmentInfo)
+
         clearData()
     }
 
@@ -110,7 +119,7 @@ const AddAppointment = () => {
                     </form>
                 </div>
         </div>
-    )
+    );
 }
 
 export default AddAppointment;
