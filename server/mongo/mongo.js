@@ -11,7 +11,7 @@ mongoose
         console.log("connection failed");
     });
 
-const newSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -22,6 +22,34 @@ const newSchema = new mongoose.Schema({
     },
 });
 
-const collection = mongoose.model("collection", newSchema);
+const appointmentSchema = new mongoose.Schema({
+    userId: {
+        type: String,
+        required: true,
+    },
+    doctorName: {
+        type: String,
+        required: true,
+    },
+    patientName: {
+        type: String,
+        required: true,
+    },
+    aptDate: {
+        type: String,
+        required: true,
+    },
+    aptTime: {
+        type: String,
+        required: true,
+    },
+    aptNotes: {
+        type: String,
+    },
+});
 
-module.exports = collection;
+
+const collection = mongoose.model("collection", userSchema);
+const appointCollection = mongoose.model("appointments", appointmentSchema);
+
+module.exports = {collection, appointCollection};
