@@ -3,21 +3,16 @@ import Datepicker from "react-tailwindcss-datepicker";
 import axios from "axios";
 import AddAppointment from "./AddAppointments";
 
-
 function Calendar () {
     const [value, setValue] = useState({
         startDate: new Date(),
         endDate: new Date().setMonth(11)
     });
-    
+    const [text, setText] = useState([]);
+
     async function handleValueChange (newValue) {
         setValue(newValue);
         await submit(newValue)
-    }
-
-    function mapAppointments(data) {
-        console.log("Set", data)
-        document.getElementById('appointments').innerHTML = `<ol><li>${data}</li></ol>`;
     }
 
     async function submit(newValue) {
@@ -30,14 +25,10 @@ function Calendar () {
                     type: status,
                     starting: newValue.startDate,
                     ending: newValue.endDate,
-                })
-                .then((res) => {
-                    mapAppointments(res.data)
-                })
-                .catch((e) => {
-                    alert("Invalid Calendar Dates");
-                    console.log(e);
+                }).then(response => {
+                    setText(response.data.data);
                 });
+            
         } catch(e) {
             console.log(e);
         }
@@ -70,7 +61,26 @@ function Calendar () {
                 popoverDirection="down" 
                 placeholder="Enter Appointment Dates"
             />
-            <div id="appointments" className="bg-black rounded-lg mt-5 text-white">
+            <div id="appointments" className="bg-[#191b3c] rounded-lg mt-5 text-white">
+            {text.map(elem =>
+                    <div>
+                        <ul className="divide-y divide-gray-200">
+                            <li className="px-3 py-3 flex items-start">
+                                {/* <button onClick={()=> onDeleteAppointment(elem.id)} type="button"
+                                        className="p-1.5 mr-1.5 mt-1 rounded text-white bg-red-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    <BiTrash/></button> */}
+                                <div className="flex-grow">
+                                    <div className="flex items-center">
+                                        <span className="flex-none font-medium text-2xl text-blue-500">{elem.patientName}</span>
+                                        <span className="flex-grow text-right">{elem.aptDate}</span>
+                                    </div>
+                                    <div><b className="font-bold text-blue-500">Doctor:</b>{elem.doctorName}</div>
+                                    <div className="leading-tight">{elem.aptNotes}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                )}
             </div>
         </div>
     );
