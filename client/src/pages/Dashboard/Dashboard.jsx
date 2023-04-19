@@ -8,14 +8,14 @@ function Dashboard() {
     const location = useLocation();
 
     return (
-        <div className="h-screen bg-[#191b3c]" >
+        <div className="bg-[#191b3c]" >
             <DashboardHeader/>
-            <>
-            <div className="float-left">
-                <Sidebar/>
+            <div className="h-[94vh]">
+                <div className="float-left">
+                    <Sidebar/>
+                </div>
+                <DashboardComponents/>
             </div>
-            <DashboardComponents/>
-            </>
         </div>
     );
 }

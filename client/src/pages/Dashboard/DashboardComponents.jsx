@@ -8,7 +8,7 @@ import DashboardHeader from "./DashboardHeader";
 const DashboardComponents = () => {
     return (
         <>
-            <div className="grid grid-cols-2 gap-4 h-screen bg-[#fff]">
+            <div className="grid grid-cols-2 gap-4 h-full bg-[#fff]">
                 <Appointments />
                 <Chat />
                 <Prescriptions />
