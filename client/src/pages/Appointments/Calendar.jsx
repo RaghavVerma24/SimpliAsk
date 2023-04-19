@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 import axios from "axios";
 import AddAppointment from "./AddAppointments";
+import AppointmentCard from "./AppointmentCard";
 
 function Calendar () {
     const [value, setValue] = useState({
@@ -9,9 +10,11 @@ function Calendar () {
         endDate: new Date().setMonth(11)
     });
     const [text, setText] = useState([]);
+    const [dates, setDates] = useState("");
 
     async function handleValueChange (newValue) {
         setValue(newValue);
+        setDates(`${(value.startDate).toString()} ~ ${(value.endDate).toString()}`)
         await submit(newValue)
     }
 
@@ -61,26 +64,16 @@ function Calendar () {
                 popoverDirection="down" 
                 placeholder="Enter Appointment Dates"
             />
-            <div id="appointments" className="bg-[#191b3c] rounded-lg mt-5 text-white">
-            {text.map(elem =>
-                    <div>
-                        <ul className="divide-y divide-gray-200">
-                            <li className="px-3 py-3 flex items-start">
-                                {/* <button onClick={()=> onDeleteAppointment(elem.id)} type="button"
-                                        className="p-1.5 mr-1.5 mt-1 rounded text-white bg-red-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                                    <BiTrash/></button> */}
-                                <div className="flex-grow">
-                                    <div className="flex items-center">
-                                        <span className="flex-none font-medium text-2xl text-blue-500">{elem.patientName}</span>
-                                        <span className="flex-grow text-right">{elem.aptDate}</span>
-                                    </div>
-                                    <div><b className="font-bold text-blue-500">Doctor:</b>{elem.doctorName}</div>
-                                    <div className="leading-tight">{elem.aptNotes}</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                )}
+
+            <div id="appointments" >
+                {dates != "" ? <div className="my-5 text-[#177eff] text-[18px] font-semibold">Showing results from: {dates}</div> : <></>}
+                <div className="overflow-y-scroll max-h-[75vh]">
+                    {text.map((event) => (
+                        <div key={event._id} className="bg-[#191b3c] mb-4 p-5 h-full rounded-xl shadow-md ">
+                            <AppointmentCard event={event}/>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
