@@ -3,6 +3,7 @@ import Datepicker from "react-tailwindcss-datepicker";
 import axios from "axios";
 import AddAppointment from "./AddAppointments";
 import AppointmentCard from "./AppointmentCard";
+import { dateCheck } from "../../components/HelperFunctions";
 
 function Calendar () {
     const [value, setValue] = useState({
@@ -29,6 +30,11 @@ function Calendar () {
                     starting: newValue.startDate,
                     ending: newValue.endDate,
                 }).then(response => {
+                    for (let i = 0; i < response.data.data.length; i++) {
+                        if(!dateCheck(newValue.startDate, newValue.endDate, response.data.data[i].aptDate)) {
+                            delete response.data.data[i]
+                        }
+                    }
                     setText(response.data.data);
                 });
             
