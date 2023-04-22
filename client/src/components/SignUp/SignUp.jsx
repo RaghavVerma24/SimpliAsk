@@ -56,18 +56,41 @@ function SignUp() {
                                         <div className="md:mx-2 md:p-8">
                                             <h1 className="text-2xl md:text-3xl font-bold leading-tight">Join Us Today</h1>
                                             <form className="mt-5" action="POST">
-                                            <div>
-                                                <label className="block text-gray-700">First and Last Name</label>
-                                                <input type="email" name id placeholder="Enter Full Name" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autoComplete required onChange={(e) => {setName(e.target.value);}}/>
-                                            </div>
-                                            <div className="mt-4">
-                                                <label className="block text-gray-700">Email Address</label>
-                                                <input type="email" name id placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autoComplete required onChange={(e) => {setEmail(e.target.value);}}/>
-                                            </div>
-                                            <div className="mt-4">
-                                                <label className="block text-gray-700">Password</label>
-                                                <input type="password" name id placeholder="Enter Password" minLength={6} className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required onChange={(e) => {setPassword(e.target.value);}}/>
-                                            </div>
+                                                <div className="flex w-full">
+                                                    <div className="w-1/2">
+                                                        <div>
+                                                            <label className="block text-gray-700">First and Last Name</label>
+                                                            <input type="email" name id placeholder="Enter Full Name" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autoComplete required onChange={(e) => {setName(e.target.value);}}/>
+                                                        </div>
+                                                        <div className="mt-4">
+                                                            <label className="block text-gray-700">Email Address</label>
+                                                            <input type="email" name id placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autoComplete required onChange={(e) => {setEmail(e.target.value);}}/>
+                                                        </div>
+                                                        <div className="mt-4">
+                                                            <label className="block text-gray-700">Password</label>
+                                                            <input type="password" name id placeholder="Enter Password" minLength={6} className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required onChange={(e) => {setPassword(e.target.value);}}/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-1/2 ml-5">
+                                                        <div>
+                                                            <label className="block text-gray-700">Upload a profile picture</label>
+                                                            <input className="mt-2 relative m-0 block w-full min-w-0 flex-auto rounded-lg cursor-pointer bg-gray-200 px-3 py-[0.32rem] text-lg leading-[2.15] font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" id="formFileLg" type="file" accept="image/*"/>
+                                                        </div>
+                                                        <div className="mt-4">
+                                                            <label className="block text-gray-700">Upload your health card</label>
+                                                            <div class="flex mt-2 items-center justify-center w-full">
+                                                                <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                                                    <div class="flex flex-col items-center justify-center pt-5 pb-8">
+                                                                        <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                                                        <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                                                                    </div>
+                                                                    <input id="file" type="file" class="hidden" accept="image/*"/>
+                                                                </label>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             <button type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
                                                 px-4 py-3 mt-10" onClick={submit}>Get Started</button>
                                             </form>
