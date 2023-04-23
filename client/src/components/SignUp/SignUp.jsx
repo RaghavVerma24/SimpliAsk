@@ -13,25 +13,28 @@ function SignUp() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    let [profile, setProfile] = useState("");
+    const [card, setCard] = useState("");
 
     const history = useNavigate();
 
     async function submit(e) {
         e.preventDefault();
-        console.log("SignUp");
 
+        profile = profile.split("\\")[2]
         try {
             await axios
                 .post("http://localhost:8000/signup", {
                     email,
                     password,
+                    profile
                 })
                 .then((res) => {
                     if ((res.data == "exist")) {
                         alert("User already exists");
                     } else if ((res.data == "nonexist")) {
                         console.log("New User")
-                        history("/dashboard", { state: { id: email } });
+                        // history("/dashboard", { state: { id: email } });
                     }
                 })
                 .catch((e) => {
@@ -46,16 +49,16 @@ function SignUp() {
     return (
         <div className="">
             <Navbar />
-            <section className="gradient-form h-[93vh] bg-[#191b3c]">
+            <section className="gradient-form h-full bg-[#191b3c]">
                 <div className="container h-full p-10 m-auto">
                     <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
                         <div className="w-full">
-                            <div className="h-[65vh] block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
+                            <div className="h-full block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
                                 <div className="h-full g-0 lg:flex lg:flex-wrap">
                                     <div className="px-4 md:px-0 lg:w-1/2">
                                         <div className="md:mx-2 md:p-8">
                                             <h1 className="text-2xl md:text-3xl font-bold leading-tight">Join Us Today</h1>
-                                            <form className="mt-5" action="POST">
+                                            <form className="mt-5" action="POST" enctype="multipart/form-data">
                                                 <div className="flex w-full">
                                                     <div className="w-1/2">
                                                         <div>
@@ -74,7 +77,10 @@ function SignUp() {
                                                     <div className="w-1/2 ml-5">
                                                         <div>
                                                             <label className="block text-gray-700">Upload a profile picture</label>
-                                                            <input className="mt-2 relative m-0 block w-full min-w-0 flex-auto rounded-lg cursor-pointer bg-gray-200 px-3 py-[0.32rem] text-lg leading-[2.15] font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" id="formFileLg" type="file" accept="image/*"/>
+                                                            <input onChange={(e) => {
+                                                                        console.log("Uploaded")
+                                                                        setProfile(e.target.value);
+                                                                    }} className="mt-2 relative m-0 block w-full min-w-0 flex-auto rounded-lg cursor-pointer bg-gray-200 px-3 py-[0.32rem] text-lg leading-[2.15] font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" id="formFileLg" type="file" accept="image/*"/>
                                                         </div>
                                                         <div className="mt-4">
                                                             <label className="block text-gray-700">Upload your health card</label>
@@ -85,7 +91,10 @@ function SignUp() {
                                                                         <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                                                                         <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                                                                     </div>
-                                                                    <input id="file" type="file" class="hidden" accept="image/*"/>
+                                                                    <input id="dropzone-file" type="file" class="hidden" accept="image/*" onChange={(e) => {
+                                                                        console.log("Uploaded")
+                                                                        setCard(e.target.value);
+                                                                    }}/>
                                                                 </label>
                                                             </div> 
                                                         </div>
@@ -125,13 +134,13 @@ function SignUp() {
                                             <p className="text-sm text-gray-500 mt-5">© 2023 SimpliAsk - All Rights Reserved.</p>
                                         </div>
                                     </div>
-                                    <div className="px-4 md:px-0 lg:w-1/2 bg-[#FD7401] rounded-r-lg">
+                                    <div className="px-4 md:px-0 lg:w-1/2 bg-[#FD7401] rounded-r-lg max-w-[full] hidden lg:block">
                                         <img
                                             src={SignupImg}
                                             alt="Doctor Image "
                                             className="w-full p-10"
                                         />
-                                            
+                                        
                                     </div>
                                 </div>
                             </div>

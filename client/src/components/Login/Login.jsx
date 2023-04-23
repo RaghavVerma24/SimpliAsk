@@ -44,11 +44,11 @@ function Login() {
     return (
         <div className="">
             <Navbar />
-            <section className="gradient-form h-[93vh] bg-[#191b3c]">
+            <section className="gradient-form h-full bg-[#191b3c]">
                 <div className="container h-full p-10 m-auto">
                     <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
                         <div className="w-full">
-                            <div className="h-[65vh] block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
+                            <div className="h-full block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
                                 <div className="h-full g-0 lg:flex lg:flex-wrap">
                                     <div className="px-4 md:px-0 lg:w-1/2">
                                         <div className="md:mx-2 md:p-8">
@@ -99,7 +99,7 @@ function Login() {
                                             <p className="text-sm text-gray-500 mt-5">© 2023 SimpliAsk - All Rights Reserved.</p>
                                         </div>
                                     </div>
-                                    <div className="px-4 md:px-0 lg:w-1/2 bg-[#FD7401] rounded-r-lg">
+                                    <div className="px-4 md:px-0 lg:w-1/2 bg-[#FD7401] rounded-r-lg max-w-[full] hidden lg:block">
                                         <img
                                             src={LoginImg}
                                             alt="Doctor Image "
