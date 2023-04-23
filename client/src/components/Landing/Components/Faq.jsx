@@ -35,7 +35,7 @@ const Faq = () => {
 
                             {toggle1 &&
                                 <div class="px-4 pb-5 sm:px-6 sm:pb-6">
-                                    <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                    <p>Click Sign up and register an account. You will need to have a profile picture and a valid health card with you during the process.</p>
                                 </div>
                             }
                             
@@ -43,7 +43,7 @@ const Faq = () => {
 
                         <div class="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
                             <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" onClick={() => setToggle2(!toggle2)}>
-                                <span class="flex text-lg font-semibold text-black"> How can I make payment using Paypal? </span>
+                                <span class="flex text-lg font-semibold text-black"> What should patients do in case of technical issues or app-related problems? </span>
 
                                 {toggle2 ?
                                     <svg class="w-6 h-6 text-gray-400 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
@@ -58,7 +58,7 @@ const Faq = () => {
 
                             {toggle2 &&
                                 <div class="px-4 pb-5 sm:px-6 sm:pb-6">
-                                    <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                    <p> In case of technical issues or app-related problems, patients should typically contact the support team on the main page.</p>
                                 </div>
                             }
                         </div>
@@ -66,7 +66,7 @@ const Faq = () => {
                         <div class="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
                             <div class="">
                                 <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" onClick={() => setToggle3(!toggle3)}>
-                                    <span class="flex text-lg font-semibold text-black"> Can I cancel my plan? </span>
+                                    <span class="flex text-lg font-semibold text-black"> Can doctors conduct virtual consultations using the app? </span>
 
                                     {toggle3 ?
                                         <svg class="w-6 h-6 text-gray-400 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
@@ -81,7 +81,7 @@ const Faq = () => {
 
                                 {toggle3 &&
                                     <div class="px-4 pb-5 sm:px-6 sm:pb-6">
-                                        <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                        <p>Yes, virtual consultations are a common feature of doctor patient connectivity apps. Doctors can conduct video consultations with patients through the app, allowing for remote diagnosis, treatment, and follow-up appointments.</p>
                                     </div>
                                 }
                             </div>
@@ -89,7 +89,7 @@ const Faq = () => {
 
                         <div class="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
                             <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" onClick={() => setToggle4(!toggle4)}>
-                                <span class="flex text-lg font-semibold text-black"> How can I reach to support? </span>
+                                <span class="flex text-lg font-semibold text-black"> How can patients book appointments using the doctor patient connectivity app? </span>
 
                                 {toggle4 ?
                                     <svg class="w-6 h-6 text-gray-400 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
@@ -104,7 +104,7 @@ const Faq = () => {
 
                             {toggle4 &&
                                 <div class="px-4 pb-5 sm:px-6 sm:pb-6">
-                                    <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                    <p>Patients can typically book appointments through the app by selecting an available time slot from the doctor's schedule.</p>
                                 </div>
                             }
                         </div>
