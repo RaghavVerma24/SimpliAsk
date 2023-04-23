@@ -10,7 +10,7 @@ import Records from "./pages/Records/Records.jsx";
 
 function App() {
   return (
-    <div className='h-1 bg-[#191b3c]'>
+    <div className='h-screen bg-[#191b3c]'>
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />

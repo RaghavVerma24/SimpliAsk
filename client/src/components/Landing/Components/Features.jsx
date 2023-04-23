@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Features = () => {
     return (
         <>
-            <div className="py-20 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="features">
+            <div className="py-0 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="features">
                 <div className="max-w-50 hidden lg:block">
                     <img
                         src={AppointmentImg}
@@ -59,7 +59,7 @@ const Features = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-20 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20">
+            <div className="bg-[#191b3c] my-20 py-20 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20">
                 <div className="xl:max-w-3xl">
                     <h2 className="text-[40px] font-bold text-[#fff] mb-3">
                         Fast Chat Communication between Patients and Doctors
@@ -108,7 +108,7 @@ const Features = () => {
                     />
                 </div>
             </div>
-            <div className="py-20 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-25">
+            <div className="py-0 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-25">
                 <div className="max-w-50 hidden lg:block">
                     <img
                         src={PrescriptionImg}

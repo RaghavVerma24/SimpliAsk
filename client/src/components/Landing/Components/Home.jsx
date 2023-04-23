@@ -7,7 +7,7 @@ import DoctorImg from "../../../assets/doctor.svg";
 const Home = () => {
     return (
         <>
-            <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="home">               
+            <div className="bg-[#191b3c] py-20 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8" id="home">               
                 <div className="float-left ml-20 xl:max-w-3xl pr-20">
                     <h2 className="text-[50px] font-bold text-white">
                         The Ultimate Doctor to Patient connectivity tool
@@ -44,13 +44,15 @@ const Home = () => {
                 </div>                
                 
             </div>
-            <h1 className="animate-bounce text-white w-6 h-6 mx-auto mb-10">
-                <FontAwesomeIcon
-                    icon={faArrowCircleDown}
-                    className=" text-[50px]"
-                    onClick={() => scrollFunction('features')}
-                />
-            </h1>
+            <div className="bg-[#191b3c] h-20">
+                <h1 className="animate-bounce text-white w-6 h-6 mx-auto">
+                    <FontAwesomeIcon
+                        icon={faArrowCircleDown}
+                        className=" text-[50px]"
+                        onClick={() => scrollFunction('features')}
+                    />
+                </h1>
+            </div>
         </>
     );
 };

@@ -8,7 +8,7 @@ import Contact from './Components/Contact'
 
 const Landing = () => {
   return (
-    <div className='bg-[#191b3c] h-100'>
+    <div className='bg-[#fff] h-100'>
       <Navbar/>
       <Home/>
       <Features/>

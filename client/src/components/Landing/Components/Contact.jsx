@@ -2,15 +2,15 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8" id="contact">
+    <div className="py-10 bg-white justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8" id="contact">
       <div className="container mt-20 px-6 mx-auto">
         <section className="text-gray-800">
           <div className="flex flex-wrap">
             <div className="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
-              <h2 className="text-[40px] font-bold text-[#fff]">
+              <h2 className="text-[40px] font-bold text-[#191b3c]">
                   Contact Us
               </h2>
-              <h2 className="text-[20px] text-[#c0b2ac] break-word mb-10">
+              <h2 className="text-[20px] text-gray-600 break-word mb-10">
               We value your health and well-being, and our team of experienced healthcare professionals are here to assist you. Whether you have questions about our services, need to schedule an appointment, or have any other inquiries, we're here to help. You can reach us by filling out the contact form.
                     </h2>
                     
