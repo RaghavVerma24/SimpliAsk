@@ -5,7 +5,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full bg-[#191b3c] shadow">
+    <nav className="sticky top-0 w-full bg-[#191b3c] shadow z-20">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
