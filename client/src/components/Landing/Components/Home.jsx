@@ -16,7 +16,7 @@ const Home = () => {
                         Facilitate secure and reliable communication between doctors
                         and patients through a range of digital channels, such as video conferencing, messaging, and email.
                     </h2>
-                    <div className="hidden space-x-2 md:inline-block mr-5 shadow-2xl">
+                    <div className="hidden space-x-2 sm:inline-block mr-5 shadow-2xl">
                         <a
                             href="signup"
                             className="px-8 py-4 text-white bg-[#6c63ff] font-bold rounded-md shadow text-[18px]"   
@@ -25,7 +25,7 @@ const Home = () => {
                             Get Started
                         </a>
                     </div>
-                    <div className="hidden space-x-2 md:inline-block shadow-2xl">
+                    <div className="hidden space-x-2 sm:inline-block shadow-2xl">
                         <a
                             className="px-8 py-4 text-[#191b3c] bg-white font-bold rounded-md shadow text-[18px] hover:cursor-pointer"
                             style={{ width: 800, boxShadow: "rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px"}}
@@ -35,7 +35,7 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-                <div className="max-w-50">
+                <div className="max-w-50 hidden lg:block">
                     <img
                         src={DoctorImg}
                         alt="Doctor Image "
