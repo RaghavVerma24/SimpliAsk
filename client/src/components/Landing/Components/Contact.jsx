@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8">
+    <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8" id="contact">
       <div className="container mt-20 px-6 mx-auto">
         <section className="text-gray-800">
           <div className="flex flex-wrap">

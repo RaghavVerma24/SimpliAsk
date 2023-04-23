@@ -8,7 +8,7 @@ const Faq = () => {
 
     return (
         <div>
-            <section class="py-10 sm:py-16 lg:py-24">
+            <section class="py-10 sm:py-16 lg:py-24" id="faq">
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div class="max-w-5xl mx-auto text-center">
                         <h2 className="text-[40px] font-bold text-[#fff]">

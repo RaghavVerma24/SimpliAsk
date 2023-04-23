@@ -7,7 +7,7 @@ import DoctorImg from "../../../assets/doctor.svg";
 const Home = () => {
     return (
         <>
-            <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20">               
+            <div className="py-10 justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="home">               
                 <div className="float-left ml-20 xl:max-w-3xl pr-20">
                     <h2 className="text-[50px] font-bold text-white">
                         The Ultimate Doctor to Patient connectivity tool
@@ -18,7 +18,7 @@ const Home = () => {
                     </h2>
                     <div className="hidden space-x-2 md:inline-block mr-5 shadow-2xl">
                         <a
-                            href="javascript:void(0)"
+                            href="signup"
                             className="px-8 py-4 text-white bg-[#6c63ff] font-bold rounded-md shadow text-[18px]"   
                             style={{ width: 800, boxShadow: "rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px"}}
                         >
@@ -27,9 +27,9 @@ const Home = () => {
                     </div>
                     <div className="hidden space-x-2 md:inline-block shadow-2xl">
                         <a
-                            href="javascript:void(0)"
-                            className="px-8 py-4 text-[#191b3c] bg-white font-bold rounded-md shadow text-[18px]"
+                            className="px-8 py-4 text-[#191b3c] bg-white font-bold rounded-md shadow text-[18px] hover:cursor-pointer"
                             style={{ width: 800, boxShadow: "rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px"}}
+                            onClick={() => scrollFunction('features')}
                         >
                             Learn More
                         </a>
@@ -48,7 +48,7 @@ const Home = () => {
                 <FontAwesomeIcon
                     icon={faArrowCircleDown}
                     className=" text-[50px]"
-                    onClick={() => scrollFunction('appointments')}
+                    onClick={() => scrollFunction('features')}
                 />
             </h1>
         </>

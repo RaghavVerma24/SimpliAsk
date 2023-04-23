@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Features = () => {
     return (
         <>
-            <div className="py-20 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="appointments">
+            <div className="py-20 bg-[#fff] justify-center xl:max-w-8xl mx-auto md:items-center flex flex-row md:px-8 my-20" id="features">
                 <div className="max-w-50">
                     <img
                         src={AppointmentImg}

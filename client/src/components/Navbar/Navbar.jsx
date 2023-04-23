@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { scrollFunction } from "../HelperFunctions";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -56,17 +57,17 @@ const Navbar = () => {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Home</a>
+              <li className="text-white hover:text-indigo-200 hover:cursor-pointer">
+                <a onClick={() => scrollFunction('home')}>Home</a>
               </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Features</a>
+              <li className="text-white hover:text-indigo-200 hover:cursor-pointer">
+                <a onClick={() => scrollFunction('features')}>Features</a>
               </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">FAQs</a>
+              <li className="text-white hover:text-indigo-200 hover:cursor-pointer">
+                <a onClick={() => scrollFunction('faq')}>FAQs</a>
               </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Contact</a>
+              <li className="text-white hover:text-indigo-200 hover:cursor-pointer">
+                <a onClick={() => scrollFunction('contact')}>Contact</a>
               </li>
             </ul>
           </div>
