@@ -18,6 +18,7 @@
     "pubnub-react": "^3.0.2",
     "react": "^17.0.2",
     "react-calendar": "^4.2.1",
+    "react-chat-elements": "^12.0.8",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.9.0",
     "react-tailwindcss-datepicker": "^1.6.0",
