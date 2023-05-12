@@ -24,7 +24,7 @@ function SignUp() {
         profile = profile.split("\\")[2]
         try {
             await axios
-                .post("http://localhost:8000/signup", {
+                .post("http://localhost:8080/signup", {
                     email,
                     password,
                     profile
@@ -33,8 +33,8 @@ function SignUp() {
                     if ((res.data == "exist")) {
                         alert("User already exists");
                     } else if ((res.data == "nonexist")) {
-                        console.log("New User")
-                        // history("/dashboard", { state: { id: email } });
+                        // console.log("New User")
+                        history("/dashboard", { state: { id: email } });
                     }
                 })
                 .catch((e) => {

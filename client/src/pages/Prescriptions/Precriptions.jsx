@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Precriptions = () => {
+const Prescriptions = () => {
   return (
     <div>Precriptions</div>
   )
 }
 
-export default Precriptions
+export default Prescriptions

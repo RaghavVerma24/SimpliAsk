@@ -25,7 +25,7 @@ function Calendar () {
         let status = "calendar"
         try {
             await axios
-                .post("http://localhost:8000/appointments", {
+                .post("http://localhost:8080/appointments", {
                     type: status,
                     starting: newValue.startDate,
                     ending: newValue.endDate,

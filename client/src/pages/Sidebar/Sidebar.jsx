@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Sidebar() {
     return (
-        <div className="h-screen flex bg-[#fff]">
+        <div className="h-full flex bg-[#fff]">
             <div className="flex flex-col p-3 bg-[#0C0404] shadow w-60">
                 <div className="space-y-3">
                     <div className="flex-1">
@@ -35,7 +35,7 @@ export default function Sidebar() {
                                     />
 
                                     <span className="text-gray-100 text-[18px]">
-                                        Appoinments
+                                        Appointments
                                     </span>
                                 </a>
                             </li>
@@ -50,22 +50,7 @@ export default function Sidebar() {
                                     />
 
                                     <span className="text-gray-100 text-[18px]">
-                                        Chat
-                                    </span>
-                                </a>
-                            </li>
-                            <li className="rounded-sm">
-                                <a
-                                    href="/precriptions"
-                                    className="flex items-center p-2 space-x-3 rounded-md"
-                                >
-                                    <FontAwesomeIcon
-                                        icon={faPrescriptionBottleMedical}
-                                        className="text-[#fff] text-2xl"
-                                    />
-
-                                    <span className="text-gray-100 text-[18px]">
-                                        Prescriptions
+                                        Video Chat
                                     </span>
                                 </a>
                             </li>
@@ -80,7 +65,7 @@ export default function Sidebar() {
                                     />
 
                                     <span className="text-gray-100 text-[18px]">
-                                        Records
+                                        Assistant
                                     </span>
                                 </a>
                             </li>

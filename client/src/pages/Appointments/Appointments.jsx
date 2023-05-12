@@ -13,8 +13,8 @@ const Appointments = () => {
             <Sidebar/>
         </div>
         <div className="bg-[#fff] w-full">
-          <div className="grid grid-cols-2 gap-4 h-full bg-[#fff]">
-            <AddAppointment/>
+          <div className="grid grid-cols-2 h-full bg-[#fff]">
+            <AddAppointment/>            
             <div className="float-left">
               <Calendar/>
               {/* <AddAppointment/> */}
