@@ -2,6 +2,8 @@
 
 A Doctor to Patient connectivity tool built with the MERN (MongoDB, Express, React, and Node.js) stack. The tool includes features such as data hashing with bcrypt for enhanced security, user authentication with JWT, real-time video conferencing with WebRTC, a personal assistant with Artyom.js, appointment scheduling platform, inbuilt chat between doctors and patients, and web chats.
 
+![image](https://github.com/RaghavVerma24/SimpliAsk/assets/59304737/c0f57159-e894-4080-959a-ff47dfc71167)
+
 ## Technologies Used
 
 - **MongoDB**: A popular NoSQL database for storing data in a flexible, JSON-like format.
